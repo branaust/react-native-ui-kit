@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "react-native-ui-kit": ["../src/index"],
+      "react-native-ui-kit/*": ["../src/*"]
+    }
+  }
+}
