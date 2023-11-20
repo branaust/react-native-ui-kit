@@ -12,6 +12,7 @@ import {
 } from "./ReactNativeUiKit.types";
 import ReactNativeUiKitModule from "./ReactNativeUiKitModule";
 import ReactNativeUiKitView from "./ReactNativeUiKitView";
+import SwiftUIButtonView from "./SwiftUIButtonView";
 
 // Get the native constant value.
 export const PI = ReactNativeUiKitModule.PI;
@@ -34,4 +35,9 @@ export function addChangeListener(
   return emitter.addListener<ChangeEventPayload>("onChange", listener);
 }
 
-export { ReactNativeUiKitView, ReactNativeUiKitViewProps, ChangeEventPayload };
+export {
+  SwiftUIButtonView,
+  ReactNativeUiKitView,
+  ReactNativeUiKitViewProps,
+  ChangeEventPayload,
+};
