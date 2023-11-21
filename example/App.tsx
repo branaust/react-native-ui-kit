@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native';
-
-import * as ReactNativeUiKit from 'react-native-ui-kit';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { UIButton } from "react-native-ui-kit";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>{ReactNativeUiKit.hello()}</Text>
+      <UIButton color="systemBlue" />
+      <UIButton color="systemYellow" />
+      <Text>👋 Hello from App.tsx</Text>
     </View>
   );
 }
@@ -13,8 +15,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

@@ -6,7 +6,9 @@ public class SwiftUIButtonModule: Module {
         Name("SwiftUIButton")
 
         View(SwiftUIButtonWrapper.self) {
-            // You can define props and events here
+            Prop("color") { (view: SwiftUIButtonWrapper, color: String) in
+                view.color = color
+            }
         }
     }
 }
