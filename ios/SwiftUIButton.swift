@@ -19,7 +19,7 @@ struct SwiftUIButton: View {
                 Text("SwiftUI Button")
             }
             .buttonStyle(.borderedProminent)
-            // .frame(minWidth: 200, minHeight: 50)
+            .frame(minWidth: 200, minHeight: 50)
             .tint(Color(color))
         } else {
             // Fallback for iOS versions below 15.0
@@ -49,6 +49,7 @@ public class SwiftUIButtonWrapper: UIView {
             host.rootView = SwiftUIButton(color: systemColor)
         }
     }
+
     private func systemUIColor(from colorNameOrHex: String) -> UIColor {
         switch colorNameOrHex.lowercased() {
         case "systemred":
@@ -92,6 +93,8 @@ public class SwiftUIButtonWrapper: UIView {
         return UIColor(red: r, green: g, blue: b, alpha: a)
     }
     
+
+    // TODO: This wrapper is not accounting for size
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.hostingController = UIHostingController(rootView: SwiftUIButton(color: systemUIColor(from: color)))
@@ -100,10 +103,6 @@ public class SwiftUIButtonWrapper: UIView {
             host.view.frame = self.bounds
             host.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         }
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 

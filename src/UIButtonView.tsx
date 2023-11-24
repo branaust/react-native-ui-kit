@@ -13,9 +13,5 @@ const NativeSwiftUIButton: React.ComponentType<SwiftUIButtonProps> =
 
 export default function UIButtonView(props: SwiftUIButtonProps) {
   // Here you can handle any additional logic, like event handlers or state
-  return (
-    <View style={{ height: 200, width: 200 }}>
-      <NativeSwiftUIButton {...props} />
-    </View>
-  );
+  return <NativeSwiftUIButton {...props} />;
 }
